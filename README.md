@@ -1,19 +1,31 @@
-# :earth_americas: GDP dashboard template
+# GDP dashboard
 
-A simple Streamlit app showing the GDP of different countries in the world.
+This repository contains two starter apps:
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+- A Streamlit GDP-by-country dashboard at the repository root.
+- A Flutter GDP and logistics operations dashboard in `flutter_app/`.
 
-### How to run it on your own machine
+## Run the Streamlit dashboard
 
-1. Install the requirements
+Install the requirements and start the app:
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+```sh
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
-2. Run the app
+## Run the Flutter dashboard
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Install the [Flutter SDK](https://docs.flutter.dev/get-started/install), then run:
+
+```sh
+cd flutter_app
+# Generate platform runner files on first setup.
+flutter create .
+flutter pub get
+flutter run
+```
+
+The Flutter app is an initial UI scaffold with responsive navigation, sample GDP
+and shipment metrics, and clearly labeled placeholder sections. Its displayed
+operations figures are illustrative and are not connected to a live data source.
